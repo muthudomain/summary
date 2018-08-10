@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  become_method: sudo
+  tasks:
+    - name: getting status from previous playbook
+      debug: msg="file_status={{first_file_status}}"
+
+    - namme: getting status of second file from previous playbook
+      debug: msg="file2_status={{second_file_status}}"
